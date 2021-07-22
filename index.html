@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="Ora6ft2cL2SmZJywSyczsuvonUngBzGaqV7rtI1G">
+    <title>Index</title>
+
+    <link rel="icon" href="images/favic.ico"/>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="header__left">
+            <a href="#" class="main-logo">
+                <img src="./images/main-logo.svg" alt="main-logo">
+            </a>
+        </div>
+        <div class="app-call">
+            <a href="#" class="app-call__number">
+                8 900 016-39-50
+            </a>
+            <span class="app-call__book js-feedback-toggle">Заказать звонок</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="product-block">
+                <div class="product-block__text">
+                    <h2>Бриллиант</h2>
+                    <p>57 граней</p>
+                </div>
+                <div class="product-block__text">
+                    <h2>Золото</h2>
+                    <p>585 пробы</p>
+                </div>
+                <div class="product-block__text">
+                    <p> c промокодом</p>
+                    <h1>8 990<span>₽</span></h1>
+                    <p><span class="p-line-through">25 980</span> ₽</p>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="content__title">Золотое кольцо с бриллиантом</h1>
+                <p>
+                    Оставьте ваш номер телефона и мы вышлем на него промокод, а при заказе вы получите подвеску в подарок
+                </p>
+            </div>
+
+            <form class="form js-zayavka">
+                <div class="form__input-field">
+                    <input type="tel" name="phone" class="input phone-mask"
+                           placeholder="Введите ваш номер*">
+                    <span class="input-text">Введите ваш номер*</span>
+                    <div class="error_wrapper"><span class="error_alert">некорректный телефон</span></div>
+                </div>
+
+                <div class="form__bottom">
+                    <button class="form__btn">
+                        Получить промокод
+                    </button>
+                    <p>
+                        Осталось<br>
+                        22 промокода
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-view">
+    <div class="container">
+        <h1>Заказать звонок</h1>
+
+        <div class="modal-view-close js-feedback-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18">
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M1 1l16 16"></path>
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M17 1L1 17"></path>
+            </svg>
+        </div>
+
+        <form class="form modal-view__form js-zayavka">
+            <div class="form__input-field">
+                <input type="tel" name="phone" class="input phone-mask"
+                       placeholder="Ваш телефон*">
+                <span class="input-text">Ваш телефон*</span>
+                <div class="error_wrapper"><span class="error_alert">некорректный телефон</span></div>
+            </div>
+
+            <button class="form__btn">
+                Отправить заявку
+            </button>
+
+            <a href="javascript:void(0)" class="form__btn-close js-feedback-toggle">
+                Закрыть
+            </a>
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/app.js?v=1.0"></script>
+</body>
+</html>
