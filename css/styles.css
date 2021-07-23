@@ -1,7 +1,7 @@
 :root {
     --main-color: #e60003;
     --soft-white: #fff;
-    --semi-white: #fcf7f7;
+    --semi-white: #f8f6f6;
 }
 
 html, body {
@@ -36,33 +36,35 @@ p {
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
     margin: auto;
     position: relative;
     width: 100%;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
-.content__title {
-    color: var(--soft-white);
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 22px;
-    margin-bottom: 8px;
+.content__items {
+    display: flex;
+    justify-content: space-between;
+    color: #2a2828;
+}
+
+.content__left {
+    max-width: 94px;
+}
+
+.content__right {
+    max-width: 188px;
 }
 
 @media (min-width: 359px) {
-    .content h1 {
-        font-size: 18px;
+    .content__right {
+        max-width: calc(100% - 112px);
     }
 }
 
 /* header */
 .header {
-    flex-shrink: 0;
     height: 56px;
     border-bottom: 1px solid #dbd7d7;
 }
@@ -78,6 +80,36 @@ p {
 .header__left {
     display: inline-flex;
     align-items: center;
+}
+
+/* products-catalog */
+
+.products-catalog__item:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.products-catalog__img {
+    width: 62px;
+}
+
+@media (min-width: 359px) {
+    .products-catalog__img {
+        width: 72px;
+    }
+}
+
+.products-catalog__title {
+    color: #2a2828;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+}
+
+.products-catalog__price {
+    color: #2a2828;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
 }
 
 /* footer */
@@ -125,65 +157,73 @@ p {
     font-weight: 500;
     letter-spacing: -0.3px;
     color: #2a2928;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 /* product-block */
 .product-block {
-    min-height: 273px;
-    background: url("../images/Ring_Diamond.png") no-repeat;
     position: relative;
-    max-width: 330px;
-    margin: 0 auto;
-    background-size: 310px;
-    background-position-x: 4px;
 }
 
-@media (min-width: 359px) {
-    .product-block {
-        min-height: 253px;
-        background-size: 319px;
-        background-position-x: 0;
-    }
-}
-
-.product-block__text .p-line-through {
-    text-decoration: line-through;
-}
-
-.product-block__text h1 {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    line-height: 40px;
-}
-
-.product-block__text h1 span {
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 22px;
-    margin-left: 5px;
-}
-
-.product-block__text h2 {
-    font-size: 14px;
-    font-weight: 900;
+.product-block p {
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
     line-height: 18px;
 }
 
-.product-block__text:first-child {
-    margin-bottom: 24px;
+@media (min-width: 359px) {
+    .product-block p {
+        font-size: 13px;
+        line-height: 20px;
+    }
 }
 
-.product-block__text:nth-child(3) {
+.product-block__img {
+    max-width: 100%;
+    margin-bottom: 11px;
+}
+
+.product-block__subtitle {
+    color: #e60003;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13px;
     position: absolute;
-    right: 0;
-    bottom: 20px;
+    top: 26px;
+    right: 25px;
 }
 
 @media (min-width: 359px) {
-    .product-block__text:nth-child(3) {
-        bottom: 33px;
+    .product-block__subtitle {
+        font-size: 13px;
+        top: 33px;
+    }
+}
+
+.product-block__subtitle span {
+    font-weight: 400;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    display: block;
+    margin-top: 3px;
+}
+
+.product-block__title {
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.3px;
+    line-height: 36px;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 359px) {
+    .product-block__title {
+        font-size: 32px;
+        line-height: 40px;
     }
 }
 
@@ -191,18 +231,16 @@ p {
 
 .form {
     width: 100%;
-    margin-top: 18px;
+    margin-top: 16px;
 }
 
 .form__bottom {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
+    margin-top: 8px;
 }
 
-.form__bottom .form__btn {
-    width: calc(100% - 119px);
-    margin-right: 16px;
+.form__bottom p {
+    margin-top: 16px;
+    font-weight: 400;
 }
 
 .form__btn {
@@ -213,15 +251,15 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: -0.2px;
-    background-color: var(--semi-white);
-    color: var(--main-color);
-    box-shadow: inset 0 -1px 0 rgba(230, 0, 3, 0.16);
+    background-color: var(--main-color);
+    color: var(--semi-white);
     border-radius: 1px;
     position: relative;
     overflow: hidden;
     will-change: background-color, box-shadow;
     transition: background-color 200ms ease-in-out,
-                box-shadow 200ms ease-in-out;
+    box-shadow 200ms ease-in-out;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.16), 0 8px 8px rgba(230, 0, 3, 0.16), 0 0 8px rgba(230, 0, 3, 0.08);
 }
 
 @media (min-width: 359px) {
@@ -283,13 +321,13 @@ p {
 }
 
 .input {
-    color: #fff;
+    color: #282a29;
     width: 100%;
     height: 48px;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 1px;
-    border: 1px solid var(--semi-white);
+    border: 1px solid #dbd7d7;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -330,8 +368,14 @@ p {
     pointer-events: none;
     font-size: 14px;
     line-height: 24px;
-    color: var(--semi-white);
+    color: #a7a0a0;
     transition: all 200ms ease-in-out;
+}
+
+@media (min-width: 359px) {
+    .input-text {
+        font-size: 18px;
+    }
 }
 
 /*
@@ -347,7 +391,6 @@ p {
     color: #dc1414;
 }
 */
-
 
 
 .modal-view {
@@ -410,7 +453,6 @@ p {
 }
 
 .modal-view__form .input {
-    color: #282a29;
     font-size: 18px;
     border-color: #dbd7d7;
     height: 56px;
@@ -434,9 +476,6 @@ p {
 .modal-view__form .form__btn {
     height: 56px;
     margin-top: 16px;
-    background-color: var(--main-color);
-    color: #f8f6f6;
-    box-shadow: 0 8px 8px rgba(230, 0, 3, 0.16), 0 0 8px rgba(230, 0, 3, 0.08);
 }
 
 .modal-view__form .form__btn:after {
@@ -450,7 +489,6 @@ p {
 }
 
 .modal-view__form .error_alert {
-    border: 1px solid red;
     bottom: -.5rem;
 }
 
@@ -486,17 +524,18 @@ p {
 }
 
 .error_alert {
-    font-size: 10px;
+    font-size: 8px;
     text-transform: uppercase;
     color: red;
     position: absolute;
     z-index: 10;
     background-color: #fff;
     right: .5rem;
-    bottom: -.4rem;
+    bottom: -.3rem;
     padding: 3px;
-    line-height: 8px;
+    line-height: 5px;
     border-radius: 1px;
+    border: 1px solid red;
 }
 
 @media (min-width: 768px) {

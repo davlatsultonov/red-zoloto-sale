@@ -20,7 +20,7 @@
     <div class="header">
         <div class="header__items container">
             <div class="header__left">
-                <a href="#" class="main-logo">
+                <a href="https://redzoloto.ru/" class="main-logo">
                     <img src="./images/main-logo.svg" alt="main-logo">
                 </a>
             </div>
@@ -33,48 +33,70 @@
         </div>
     </div>
     <div class="content">
-        <div class="container">
-            <div class="product-block">
-                <div class="product-block__text">
-                    <h2>Бриллиант</h2>
-                    <p>57 граней</p>
-                </div>
-                <div class="product-block__text">
-                    <h2>Золото</h2>
-                    <p>585 пробы</p>
-                </div>
-                <div class="product-block__text">
-                    <p> c промокодом</p>
-                    <h1>8 990<span>₽</span></h1>
-                    <p><span class="p-line-through">25 980</span> ₽</p>
-                </div>
+        <div class="container content__items">
+            <div class="content__left">
+                <ul class="products-catalog">
+                    <li class="products-catalog__item">
+                        <a href="#">
+                            <img class="products-catalog__img" src="./images/catalog-img1.png" alt="catalog-item-image">
+                            <h2 class="products-catalog__title">Золотые кольца</h2>
+                            <span class="products-catalog__price">от 2 690 ₽</span>
+                        </a>
+                    </li>
+                    <li class="products-catalog__item">
+                        <a href="#">
+                            <img class="products-catalog__img" src="./images/catalog-img2.png" alt="catalog-item-image">
+                            <h2 class="products-catalog__title">Золотые подвески</h2>
+                            <span class="products-catalog__price">от 1 890 ₽</span>
+                        </a>
+                    </li>
+                    <li class="products-catalog__item">
+                        <a href="#">
+                            <img class="products-catalog__img" src="./images/catalog-img3.png" alt="catalog-item-image">
+                            <h2 class="products-catalog__title">Золотые серьги</h2>
+                            <span class="products-catalog__price">от 2 990 ₽</span>
+                        </a>
+                    </li>
+                    <li class="products-catalog__item">
+                        <a href="#">
+                            <img class="products-catalog__img" src="./images/catalog-img4.png" alt="catalog-item-image">
+                            <h2 class="products-catalog__title">Серебряные украшения</h2>
+                            <span class="products-catalog__price">от 490 ₽</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div>
-                <h1 class="content__title">Золотое кольцо с бриллиантом</h1>
-                <p>
-                    Оставьте ваш номер телефона и мы вышлем на него промокод, а при заказе вы получите подвеску в подарок
-                </p>
-            </div>
-
-            <form class="form js-zayavka">
-                <div class="form__input-field">
-                    <input type="tel" name="phone" class="input phone-mask"
-                           placeholder="Введите ваш номер*">
-                    <span class="input-text">Введите ваш номер*</span>
-                    <div class="error_wrapper"><span class="error_alert">некорректный телефон</span></div>
-                </div>
-
-                <div class="form__bottom">
-                    <button class="form__btn">
-                        Получить промокод
-                    </button>
+            <div class="content__right">
+                <div class="product-block">
+                    <img class="product-block__img" src="./images/catalog-img5.png" alt="product-image">
+                    <h2 class="product-block__subtitle">
+                        Подвеска<br> в подарок! <span>Без покупок</span>
+                    </h2>
+                    <h1 class="product-block__title">SALE до 70%</h1>
                     <p>
-                        Осталось<br>
-                        22 промокода
+                        Оставьте ваш номер, а мы<br>     вышлем подборку украшений<br>   и стильную серебряную<br>   подвеску в подарок
                     </p>
                 </div>
-            </form>
+
+                <form class="form js-zayavka">
+                    <div class="form__input-field">
+                        <input type="tel" name="phone" class="input phone-mask"
+                               placeholder="Введите ваш номер*">
+                        <span class="input-text">Введите ваш номер*</span>
+                        <div class="error_wrapper"><span class="error_alert">некорректный телефон</span></div>
+                    </div>
+
+                    <div class="form__bottom">
+                        <button class="form__btn">
+                            Получить промокод
+                        </button>
+                        <p>
+                            49 человек уже получили
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
