@@ -513,6 +513,7 @@ p {
     line-height: 16px;
     text-transform: uppercase;
     margin-bottom: 8px;
+    padding-left: 4px;
 }
 
 .success-block h1 {
@@ -547,10 +548,6 @@ p {
 @media (min-width: 768px) {
     .success-block {
         padding-left: 15px;
-    }
-
-    .success-block.container {
-        max-width: 768px;
     }
 
     .success-block h1 {
